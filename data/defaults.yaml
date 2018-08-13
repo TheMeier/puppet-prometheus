@@ -90,7 +90,6 @@ prometheus::global_config:
   'external_labels':
     'monitor': 'master'
 prometheus::group: 'prometheus'
-prometheus::install_method: 'url'
 prometheus::localstorage: '/var/lib/prometheus'
 prometheus::mesos_exporter::server_type: 'master'
 prometheus::mesos_exporter::cnf_scrape_uri: 'http://localhost:5050'
