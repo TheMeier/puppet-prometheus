@@ -3,6 +3,8 @@
   "onboarding": false,
   "requireConfig": false,
   "autodiscover": true,
+  "platform": "github",
+  "repositories": ["TheMeier/puppet-prometheus"],
   "extends": ["config:recommended"],
   "enabledManagers": ["custom.regex"],
   "customManagers": [
