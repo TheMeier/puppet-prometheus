@@ -1,14 +1,17 @@
 {
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: ['config:recommended'],
-  enabledManagers: ['custom.regex'],
-  customManagers: [
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "onboarding": false,
+  "requireConfig": false,
+  "extends": ["config:recommended"],
+  "enabledManagers": ["custom.regex"],
+  "customManagers": [
     {
-      customType: 'regex',
-      fileMatch: ['_exporter.pp$'],
-      matchStrings: ['ENV YARN_VERSION=(?<currentValue>.*?)\\n'],
-      depNameTemplate: 'yarn',
-      datasourceTemplate: 'npm'
+      "customType": "regex",
+      "fileMatch": ["defaults.yaml"],
+      "matchStrings": [
+        "# renovate: depName=(?<depName>[^\\s]+?)\\s+[a-z0-9:_]+?::version:\\s+['\"]?(?<currentValue>[\\w+\\.]*)"
+      ],
+      "datasourceTemplate": "github-releases"
     }
   ]
 }
