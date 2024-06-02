@@ -5,6 +5,8 @@
   "repositories": ["TheMeier/puppet-prometheus"],
   "extends": ["config:recommended"],
   "enabledManagers": ["custom.regex"],
+  "prHourlyLimit": 10,
+  "prConcurrentLimit": 20,
   "customManagers": [
     {
       "customType": "regex",
