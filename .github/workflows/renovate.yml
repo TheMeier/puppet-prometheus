@@ -10,7 +10,20 @@ on:
 
 jobs:
   renovate:
-    permissions: write-all
+    permissions:
+      # actions: read|write|none
+      # checks: read|write|none
+      contents: write
+      # deployments: read|write|none
+      # id-token: read|write|none
+      issues: read
+      # discussions: read|write|none
+      # packages: read|write|none
+      # pages: read|write|none
+      pull-requests: write
+      repository-projects: read
+      # security-events: read|write|none
+      statuses: read
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
